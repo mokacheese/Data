@@ -22,6 +22,6 @@
 ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=PyTorch&logoColor=white)
 
 
-
+![프로젝트 메인 화면](https://github.com/mokacheese/steam/blob/master/%EB%A9%94%EC%9D%B8.png)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mokacheese&cache_seconds=86400)](https://github.com/mokacheese/steam)
 
