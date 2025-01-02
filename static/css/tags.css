@@ -1,0 +1,185 @@
+/* 전체 컨테이너 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1e1e1e;
+    font-family: Arial, sans-serif;
+}
+
+/* 좌측 태그 섹션 */
+.tags-section {
+
+    min-width: 25%;
+    background-color: #2b2b3c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.tags-section h2 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+.tags-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tags-list li {
+    margin: 10px 0;
+}
+
+.tags-list a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.tags-list a:hover,
+.tags-list a:focus {
+    color: #ffcc00; /* 활성화 및 호버 시 색상 강조 */
+}
+.tags-list a.active {
+    color: #ffcc00; /* 활성화된 링크 색상 */
+}
+/* 우측 게임 섹션 */
+.games-section {
+    width:75%;
+    background-color: #2b2b3c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+}
+
+.games-section h1 {
+    font-size: 1.8em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열 레이아웃 */
+    gap: 20px;
+}
+
+.game-card {
+    width: 100%;
+    height: auto;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #444;
+}
+
+.game-card h3 {
+    font-size: 1.2em;
+    margin: 10px 30px 10px 30px;
+    color: #595959;
+    padding-bottom: 8px 0;
+    height: 45px;
+    border-bottom: 1px solid #444;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;       /* 텍스트가 한 줄로 잘리게 설정 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;            /* 넘치는 텍스트를 숨김 */
+    white-space: normal;         /* 줄 바꿈을 허용 */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.game-card p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #595959;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.game-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.game-card a:active,
+.game-card a:focus,
+.game-card a:visited {
+    background-color: #DFE4E8;
+    color: #DFE4E8;
+    text-decoration: none;
+}
+
+
+
+/* 페이지네이션 */
+.pagination {
+    color: #DFE4E8;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    color: #DFE4E8;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+.pricing {
+    margin: 10px 0;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.price, .discount {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8em;
+    width: 60px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.pricing .final-price {
+    font-size: 24px;
+    color: #595959;
+    font-weight: bold;
+    text-align: center;
+}

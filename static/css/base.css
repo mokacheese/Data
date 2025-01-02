@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    margin:0;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    gap: 30px;
+}
+header a img{
+    width: 300px;
+    height: auto;
+}
+header form {
+    display: inline-flex;
+    margin-top: 10px;
+}
+header form button img{
+    width: 15px;
+    height: 15px;
+}
+header input[type="search"] {
+    width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+header button {
+    background-color: #555;
+    border: none;
+    padding: 10px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+header button:hover {
+    background-color: #8f72a6;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.navbar ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    gap: 20px;
+}
+.navbar li {
+    display: inline;
+}
+.navbar a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.navbar a:hover {
+    background-color: #8f72a6;
+    color: white;
+}
+.navbar a.active {
+    background-color: #8f72a6;
+    color: white;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #121212;
+    color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    padding: 10px 0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer a {
+    color: #00bfff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer nav a img{
+    width: 20px;
+    height: 20px;
+}
+
+.alert-message {
+    position: fixed;
+    padding: 10px 20px;
+    background-color: #d19636;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}

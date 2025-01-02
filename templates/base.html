@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Navi Play{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extra_css %} {% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+	    {% load static %}
+        <a href="{% url 'main' %}">
+            <img src="{% static 'imgs/logo.png' %}" alt="로고 이미지">
+        </a>
+       <form action="{% url 'search' %}" method="GET" onsubmit="return validateSearch()">
+            <input type="search" name="search" value="{{ request.GET.search }}" placeholder="게임 이름을 검색하세요." aria-label="Search games">
+            <button type="submit">
+                <img src="/static/imgs/search.png" alt="검색">
+            </button>
+        </form>
+        <nav class="navbar">
+        <ul>
+            <li><a href={% url 'search' %}>전체 게임 검색</a></li>
+            <li><a href={% url 'tags' %}>태그별 페이지</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Placeholder for dynamic content -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Game Platform. All rights reserved.</p>
+        <nav>
+            <a href="https://marred-muscari-af8.notion.site/241104-134bd16052a180719778ff790b907ba3?pvs=4">
+                <img src="{% static 'imgs/notion.png' %}" alt="Notion"> Notion
+            </a>
+            <a href="https://github.com/JOO0331/NaviPlay">
+                <img src="{% static 'imgs/github.png' %}" alt="Github"> Github
+            </a>
+        </nav>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    function validateSearch() {
+    const searchInput = document.querySelector('input[name="search"]');
+    const searchButton = document.querySelector('form button');
+
+    if (!searchInput.value.trim()) {
+        // 기존 알림 메시지 제거
+        const existingAlert = document.querySelector('.alert-message');
+        if (existingAlert) {
+            existingAlert.remove();
+        }
+
+        // 새로운 알림 메시지 생성
+        const alertMessage = document.createElement("div");
+        alertMessage.textContent = "검색어를 입력해주세요.";
+        alertMessage.classList.add("alert-message"); // 스타일 클래스 추가
+
+        // 검색창과 버튼의 위치와 크기 계산
+        const inputRect = searchInput.getBoundingClientRect();
+        const buttonRect = searchButton.getBoundingClientRect();
+
+        const left = Math.min(inputRect.left, buttonRect.left);
+        const top = Math.min(inputRect.top, buttonRect.top);
+        const right = Math.max(inputRect.right, buttonRect.right);
+        const bottom = Math.max(inputRect.bottom, buttonRect.bottom);
+
+        alertMessage.style.left = left + "px";
+        alertMessage.style.top = top + "px";
+        alertMessage.style.width = right - left + "px";
+        alertMessage.style.height = bottom - top + "px";
+
+        document.body.appendChild(alertMessage);
+
+        setTimeout(() => {
+            alertMessage.remove();
+        }, 1500);
+
+        return false; // 폼 제출 막기
+    }
+
+    return true; // 폼 제출 진행
+}
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // 네비게이션 링크에 active 클래스 추가
+    const links = document.querySelectorAll('.navbar a');
+    const currentUrl = window.location.href;
+
+    links.forEach(link => {
+        if (link.href === currentUrl) {
+            link.classList.add('active'); // 현재 URL과 일치하면 active 클래스 추가
+        }
+    });
+});
+</script>
