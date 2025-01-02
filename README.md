@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=게임리뷰&감성분석&fontSize=95)
+![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=게임리뷰-감성분석&fontSize=95)
 
 ### 이 웹페이지 프로젝트는 스팀리뷰 감성분석 웹페이지입니다.
 ### 사용자는 저장되어 있는 맛집 리스트(외부데이터 사용)에 댓글과 별점을 달 수 있고, 자신이 아는 맛집을 이미지, 주소, 평가와 함께 올릴 수 있습니다.
